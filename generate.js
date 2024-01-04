@@ -1,4 +1,4 @@
-const BASE_URL = process.env.baseUrl
+const BASE_URL = process.env.BASE_URL
 
 function generateQR() {
       const url = document.getElementById('urlInput').value;
