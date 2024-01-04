@@ -10,6 +10,12 @@ Still in your command prompt, run `node qr-code-genCLI.js`
 # Use the User Interface Route
 In your terminal or command prompt run `node index.js` to start the server running on port 3000.
 
-Load the `index.html` in your browser, you can use the form to generate your QR
+Load the `index.html` in your browser, you can use the form to generate your QR Code
+
+# Use the Live Version
+[Try the Live Version](pv-qr-generator.vercel.app)
+
+# Future plan
+Add URL shortner
 
 Enjoy!!!

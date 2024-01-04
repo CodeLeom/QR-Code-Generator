@@ -1,6 +1,6 @@
 {
   "name": "qr-code-generator",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "a simple application to generate QR Code",
   "main": "index.js",
   "scripts": {
