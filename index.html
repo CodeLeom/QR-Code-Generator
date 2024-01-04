@@ -5,12 +5,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>QR Code Generator</h1>
-  <input type="text" id="urlInput" placeholder="Enter URL here" />
-  <button onclick="generateQR()">Generate</button>
-  <div id="qrCode"></div>
-  <a id="downloadLink" style="display: none;" target="_blank">Download your QR Code</a>
+  <h1 class="heading">QR Code Generator</h1>
+  <div class="container">
+    <section class="form">
+        <div class="form-group">
+            <label for="url">Enter URL</label>
+            <input type="text" id="urlInput" placeholder="Enter URL here" />
+            <button class="btn" onclick="generateQR()">Generate</button>
+        </div>
+        <div id="qrCode"></div>
+        <a class="btn-reverse" id="downloadLink" style="display: none;" target="_blank">Download your QR Code</a>
+    </section>
+    
+  </div>
 
-  <script src="/generate.js"></script>
+  <script src="generate.js">
+
+  </script>
 </body>
 </html>

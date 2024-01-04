@@ -1,9 +1,112 @@
-body { 
-    text-align: center; 
-    margin-top: 50px; 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#qrCode { 
-        margin-top: 15px; 
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    text-align: center; 
+    margin-top: 50px;
     }
     
+a {
+    text-decoration: none;
+    color: #000;
+}
+    
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+    
+.heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+    
+.btn {
+      margin: 20px;
+      padding: 10px 20px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      background: #000;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      appearance: button;
+      justify-content: center;
+    }
+      
+.btn-reverse {
+      margin: 20px;
+      padding: 10px 20px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      background: #fff;
+      color: #000;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      appearance: button;
+      justify-content: center;
+    }
+
+.btn:hover {
+      transform: scale(0.98);
+    }
+    
+    
+.form {
+        width: 40%;
+        margin: 0 auto;
+      }
+      
+.form-group {
+        margin-bottom: 10px;
+      }
+      
+.form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-family: inherit;
+      }
+      
+.form-group label {
+        text-align: left;
+        display: block;
+        margin: 0 0 5px 3px;
+      }
+      
+@keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+@media (max-width: 600px) {
+      .boxes {
+        grid-template-columns: 1fr;
+      }
+    
+.form {
+        width: 90%;
+      }
+    }
