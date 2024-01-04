@@ -13,14 +13,21 @@
   <input type="text" id="urlInput" placeholder="Enter URL here" />
   <button onclick="generateQR()">Generate</button>
   <div id="qrCode"></div>
+  <a id="downloadLink" style="display: none;" target="_blank">Download your QR Code</a>
 
   <script>
     function generateQR() {
       const url = document.getElementById('urlInput').value;
       if (url) {
-        // Update the src of an img element to the endpoint
+        const qrImage = `http://localhost:3000/generate-qr?url=${encodeURIComponent(url)}`
+
         document.getElementById('qrCode').innerHTML =
           `<img src="http://localhost:3000/generate-qr?url=${encodeURIComponent(url)}" alt="QR Code" />`;
+
+          const downloadLink = document.getElementById('downloadLink');
+          downloadLink.href = qrImage;
+          downloadLink.download = 'qr_code.png';
+          downloadLink.style.display = 'block' 
       } else {
         alert("Please enter a URL");
       }

@@ -13,11 +13,12 @@ app.get('/generate-qr', (req, res) => {
   const url = req.query.url; 
   if (url) {
     const qr_img = qr.image(url, { type: 'png' });
-    res.writeHead(200, {'Content-Type': 'image/png'});
+    res.setHeader('Content-Disposition', 'attachment: filename="qr_code.png"')
+    res.setHeader('Content-Type', 'image/png');
     qr_img.pipe(res);
   } else {
     res.send("No URL provided");
   }
 });
 
-app.listen(port, () => console.log(`Server running at http://localhost:${port}`));
+app.listen(port, () => console.log(`Server running at Port: ${port}`));
