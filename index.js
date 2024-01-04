@@ -1,23 +1,23 @@
-import inquirer from "inquirer";
-import qr from 'qr-image';
-import fs from "fs";
+import express from 'express';
+import qr from "qr-image";
+import fs from "fs"
 
-inquirer
-  .prompt([
-    {
-        message: "Type in your URL: ", 
-        name: "URL" 
-    },
-])
-  .then((answers) => {
-    const url = answers.URL
-    var qr_svg = qr.image(url)
-    qr_svg.pipe(fs.createWriteStream("qr_img.png"))
-  })
-  .catch((error) => {
-    if (error.isTtyError) {
-      console.log("Prompt couldn't be rendered in the current environment")
-    } else {
-      console.log("Something else went wrong")
-    }
-  });
+const app = express();
+const port = 3000;
+
+// Serve static files from public directory
+app.use(express.static('public'));
+
+// Endpoint to generate QR code
+app.get('/generate-qr', (req, res) => {
+  const url = req.query.url; 
+  if (url) {
+    const qr_img = qr.image(url, { type: 'png' });
+    res.writeHead(200, {'Content-Type': 'image/png'});
+    qr_img.pipe(res);
+  } else {
+    res.send("No URL provided");
+  }
+});
+
+app.listen(port, () => console.log(`Server running at http://localhost:${port}`));

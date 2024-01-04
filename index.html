@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QR Code Generator</title>
+  <style>
+    /* Add some styling */
+    body { text-align: center; margin-top: 50px; }
+    #qrCode { margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <h1>QR Code Generator</h1>
+  <input type="text" id="urlInput" placeholder="Enter URL here" />
+  <button onclick="generateQR()">Generate</button>
+  <div id="qrCode"></div>
+
+  <script>
+    function generateQR() {
+      const url = document.getElementById('urlInput').value;
+      if (url) {
+        // Update the src of an img element to the endpoint
+        document.getElementById('qrCode').innerHTML =
+          `<img src="http://localhost:3000/generate-qr?url=${encodeURIComponent(url)}" alt="QR Code" />`;
+      } else {
+        alert("Please enter a URL");
+      }
+    }
+  </script>
+</body>
+</html>
