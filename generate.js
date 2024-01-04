@@ -1,10 +1,12 @@
-    function generateQR() {
+const bu = "https://qr-code-generator-j4tr.onrender.com";
+
+function generateQR() {
       const url = document.getElementById('urlInput').value;
       if (url) {
-        const qrImage = `http://localhost:3000/generate-qr?url=${encodeURIComponent(url)}`
+        const qrImage = `${bu}/generate-qr?url=${encodeURIComponent(url)}`
 
         document.getElementById('qrCode').innerHTML =
-          `<img src="http://localhost:3000/generate-qr?url=${encodeURIComponent(url)}" alt="QR Code" />`;
+          `<img src="${bu}/generate-qr?url=${encodeURIComponent(url)}" alt="QR Code" />`;
 
           const downloadLink = document.getElementById('downloadLink');
           downloadLink.href = qrImage;
