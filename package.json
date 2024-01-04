@@ -1,0 +1,29 @@
+{
+  "name": "qr-code-generator",
+  "version": "0.0.1",
+  "description": "a simple application to generate QR Code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeleom/qr-code-generator.git"
+  },
+  "keywords": [
+    "qr code",
+    "node",
+    "javascript"
+  ],
+  "author": "ayodele leom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeleom/qr-code-generator/issues"
+  },
+  "homepage": "https://github.com/codeleom/qr-code-generator#readme",
+  "dependencies": {
+    "inquirer": "^9.2.12",
+    "qr-image": "^3.2.0"
+  }
+}
