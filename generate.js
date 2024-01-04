@@ -1,12 +1,12 @@
-const bU = process.env.baseUrl
+const BASE_URL = process.env.baseUrl
 
 function generateQR() {
       const url = document.getElementById('urlInput').value;
       if (url) {
-        const qrImage = `${bU}/generate-qr?url=${encodeURIComponent(url)}`
+        const qrImage = `${BASE_URL}/generate-qr?url=${encodeURIComponent(url)}`
 
         document.getElementById('qrCode').innerHTML =
-          `<img src="${bU}/generate-qr?url=${encodeURIComponent(url)}" alt="QR Code" />`;
+          `<img src="${BASE_URL}/generate-qr?url=${encodeURIComponent(url)}" alt="QR Code" />`;
 
           const downloadLink = document.getElementById('downloadLink');
           downloadLink.href = qrImage;
