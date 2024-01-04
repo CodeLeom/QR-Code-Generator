@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/codeleom/qr-code-generator#readme",
   "dependencies": {
+    "express": "^4.18.2",
     "inquirer": "^9.2.12",
     "qr-image": "^3.2.0"
   }
