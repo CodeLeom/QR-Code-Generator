@@ -13,7 +13,7 @@ In your terminal or command prompt run `node index.js` to start the server runni
 Load the `index.html` in your browser, you can use the form to generate your QR Code
 
 # Use the Live Version
-[Try the Live Version](pv-qr-generator.vercel.app)
+[Try the Live Version](https://pv-qr-generator.vercel.app)
 
 # Future plan
 Add URL shortner
