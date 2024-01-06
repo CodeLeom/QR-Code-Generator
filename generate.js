@@ -1,3 +1,4 @@
+//If you are using a local server, change the `process.env.BASE_URL` to `localhost:3000`
 const BASE_URL = process.env.BASE_URL
 
 function generateQR() {
