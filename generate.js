@@ -15,7 +15,7 @@ function generateQR() {
   const url = document.getElementById("urlInput").value;
   if (url) {
     if (!urlRegex.test(url)) {
-      alert("Please enter a valid URL");
+      alert("Please enter a valid URL (e.g https://google.com)");
       return;
     }
 
