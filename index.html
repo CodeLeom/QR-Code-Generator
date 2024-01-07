@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>QR Code Generator</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1 class="heading">QR Code Generator</h1>
-  <div class="container">
-    <section class="form">
-        <div class="form-group">
+  <head>
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="heading">QR Code Generator</h1>
+    <div class="container">
+      <section class="form">
+        <!-- form element to apply HTML validation -->
+        <form id="qrCodeForm">
+          <div class="form-group">
             <label for="url">Enter URL</label>
-            <input type="text" id="urlInput" placeholder="Enter URL here" />
-            <button class="btn" onclick="generateQR()">Generate</button>
-        </div>
-        <div id="qrCode"></div>
-        <a class="btn-reverse" id="downloadLink" style="display: none;" target="_blank">Download your QR Code</a>
-    </section>
-    
-  </div>
+            <input type="url" id="urlInput" placeholder="Enter URL here" />
+            <button type="submit" class="btn">Generate</button>
+          </div>
+          <div id="qrCode"></div>
+          <a
+            class="btn-reverse"
+            id="downloadLink"
+            style="display: none"
+            target="_blank"
+            >Download your QR Code</a
+          >
+        </form>
+      </section>
+    </div>
 
-  <script src="generate.js">
-
-  </script>
-</body>
+    <script src="generate.js"></script>
+  </body>
 </html>
